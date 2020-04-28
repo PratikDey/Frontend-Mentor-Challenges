@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:200,400,600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(
+		135deg,
+		hsl(0, 0%, 100%),
+		hsl(0, 100%, 98%)
+	);
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.inner-container {
+    max-width: 450px;
+    margin: auto;
+}
+
+.left {
+    width: 60%;
+    padding: 0 40px 40px;
+    background-image: url('./images/bg-pattern-desktop.svg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.right {
+    width: 40%;   
+}
+
+.img-desktop {
+    background-image: url('./images/hero-desktop.jpg'); 
+    background-size: cover;
+    background-position: center center;
+}
+
+.logo {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    width: 200px;
+}
+
+.img-mobile {
+    display: none;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 400;
+    color: hsl(0, 6%, 24%);
+    text-transform: uppercase; 
+    letter-spacing: 15px;
+    line-height: 1.2;
+    transform: translateX(-100%);
+    animation: sloweaseheader 2s ease-in forwards;
+}
+
+@keyframes sloweaseheader {
+    to {
+        transform: translateX(0);
+    }
+}
+
+h1 span {
+    color: hsl(0, 36%, 70%);
+    font-weight: 200;
+}
+
+p {
+    color: hsl(0, 36%, 70%);
+    line-height: 25px;
+    margin: 30px 0;
+    transform: translateY(100%);
+    opacity: 0;
+    animation: sloweaseparagraph 2s ease-in forwards;
+}
+
+@keyframes sloweaseparagraph {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form {
+    position: relative;
+    transform: translateY(100%);
+    opacity: 0;
+    animation: sloweaseform 2s ease-in forwards;
+}
+
+@keyframes sloweaseform {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+input {
+    background-color: transparent;
+    width: 100%;
+    border-radius: 50px;
+    padding: 18px 30px;
+    height: 55px;
+    border: 1px solid hsl(0, 36%, 70%);
+    font-size: 16px;
+}
+
+input:focus, button:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px hsla(0, 36%, 70%, 0.6);
+}
+
+input::placeholder {
+	color: hsl(0, 36%, 70%);
+}
+
+form.error input{
+    border: 2px solid hsl(0, 93%, 68%);
+}
+
+button {
+    background-image: linear-gradient(hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: none;
+    border-radius: 50px;
+    box-shadow: 2px 5px 10px hsla(0, 36%, 70%, 0.6);
+    width: 100px;
+    padding: 15px;
+    position: absolute;
+    height: 55px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+button:hover {
+    background-image: linear-gradient(135deg, hsl(0, 93%, 68%), hsl(0, 36%, 70%));
+    transform: scale(1.1);
+}
+
+.error-icon {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 110px;
+}
+
+form.error .error-icon {
+    display: block;
+}
+
+small {
+    display: none;
+    color: hsl(0, 93%, 68%);
+    margin-left: 30px;
+}
+
+form.error small {
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+    .left {
+        width: 100%;
+    }
+    .right {
+        display: none;
+    }
+    .logo {
+        margin: 30px 0;
+        width: 100px;
+    }
+    .img-mobile {
+        display: block;
+        margin-left: -40px;
+        margin-right: -40px;
+        width: calc(100% + 80px);
+    }
+    h1 {
+        font-size: 40px;
+    }
+}

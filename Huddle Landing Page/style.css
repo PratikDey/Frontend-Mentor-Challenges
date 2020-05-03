@@ -36,6 +36,14 @@ img {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.btn:focus {
+  outline: none;
+}
+
 .btn-primary {
   background-color: hsl(322, 100%, 66%);
   color: white;

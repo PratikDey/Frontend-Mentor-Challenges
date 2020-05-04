@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Poppins&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./images/bg-desktop.svg");
+  background-color: hsl(257, 40%, 49%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+p {
+  opacity: 0.7;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+.container {
+  margin: auto;
+  max-width: 100%;
+  width: 1440px;
+}
+
+.logo {
+  margin: 30px;
+  padding: 10px;
+}
+
+.flex {
+  display: flex;
+  margin: 10px 0;
+}
+
+.flex > div:first-child {
+  flex: 0.6;
+}
+
+.flex > div:last-child {
+  flex: 0.4;
+  margin: 100px 0;
+  margin-right: 50px;
+  padding-right: 20px;
+}
+
+.illustration {
+  margin: 30px;
+  padding: 10px;
+}
+
+h1 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.img {
+  max-width: 100%;
+}
+
+button {
+  border-radius: 50px;
+  border: none;
+  background-color: white;
+  font-size: 20px;
+  color: hsl(257, 40%, 49%);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px 80px;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 1000px) {
+  .flex {
+    flex-direction: column;
+    margin: 50px 0;
+  }
+
+  .flex > div:first-child {
+    flex: 1;
+    margin-right: 0;
+  }
+
+  .flex > div:last-child {
+    flex: 1;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  p {
+    opacity: 0.7;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+  }
+}

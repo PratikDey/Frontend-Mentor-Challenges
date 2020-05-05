@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Raleway:400,700&display=swap");
+
+/* GLOBAL STYLES */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Raleway", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  cursor: pointer;
+}
+
+input::placeholder {
+  opacity: 0.6;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.2);
+}
+
+/* CONTAINER STYLES */
+.container {
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1200px;
+}
+
+/* NAV BAR STYLES */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.nav-links {
+  display: flex;
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav-links li {
+  margin-left: 50px;
+}
+
+.nav-links li a {
+  padding: 10px;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  color: hsl(243, 87%, 12%);
+}
+
+/* FLEX CONTAINER STYLES */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex > div,
+.flex > ul {
+  flex: 1;
+}
+
+.flex > div:first-child {
+  margin-right: 20px;
+}
+
+.flex > div:last-child {
+  margin-left: 20px;
+}
+
+/* FORM STYLES */
+.form {
+  display: flex;
+}
+
+.form input {
+  padding: 15px;
+  border-radius: 2px;
+  border: 1px solid hsl(243, 87%, 12%);
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  flex: 0.7;
+}
+
+/* ALL BUTTON STYLE */
+.btn {
+  background-color: hsl(224, 93%, 58%);
+  border-radius: 2px;
+  border: 1px solid hsl(224, 93%, 58%);
+  color: white;
+  flex: 0.3;
+  margin-left: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+/* SECTION1 STYLE */
+.light-background {
+  background-color: hsl(240, 75%, 98%);
+  margin-top: 100px;
+  position: relative;
+  padding: 50px 0;
+}
+
+.light-background::after {
+  content: "";
+  background-image: url("./images/bg-curve-desktop.svg");
+  position: absolute;
+  background-size: cover;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+}
+
+.green-text {
+  color: hsl(170, 45%, 43%);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.green-text img {
+  transform: translateY(20%);
+  cursor: pointer;
+}
+
+.testimonial {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-top: 40px;
+  padding: 25px;
+  width: 80%;
+}
+
+.testimonial p {
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: 1.5px;
+}
+
+.user-info {
+  display: flex;
+  margin-top: 20px;
+}
+
+.user-info img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.user-info h4 {
+  margin: 0;
+  font-weight: 700;
+}
+
+/* SECTION2 STYLE */
+.greyish {
+  background-color: hsl(238, 22%, 44%);
+  color: white;
+  padding: 40px 0;
+}
+
+.greyish form {
+  display: flex;
+  flex-direction: column;
+}
+
+.greyish input {
+  padding: 15px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  flex: 1;
+}
+
+.greyish button {
+  background-color: hsl(224, 93%, 58%);
+  border-radius: 2px;
+  border: 1px solid hsl(224, 93%, 58%);
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  width: 50%;
+  margin: 10px 10px 10px 0;
+  padding: 15px;
+}
+
+/* FOOTER STYLES */
+
+footer {
+  background-color: hsl(243, 87%, 12%);
+  color: white;
+  padding: 50px;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-start ul li img {
+  padding-right: 20px;
+}
+footer ul li {
+  margin-bottom: 20px;
+  list-style-type: none;
+}
+
+.footer-logo {
+  filter: brightness(0%) invert();
+  padding-bottom: 20px;
+}
+
+footer .circle {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  height: 40px;
+  width: 40px;
+  text-decoration: none;
+}
+
+footer .social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MOBILE STYLES */
+
+@media screen and (max-width: 768px) {
+  body {
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  nav ul li {
+    margin: 10px 20px;
+  }
+
+  .light-background::before {
+    background-image: url("./images/bg-curve-mobile.svg");
+    height: 80px;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .flex > div {
+    width: 100%;
+  }
+
+  .flex > div:first-child {
+    margin-right: 0;
+  }
+
+  .flex > div:last-child {
+    margin-left: 0;
+  }
+
+  .testimonial {
+    width: 100%;
+  }
+
+  .greyish form input {
+    flex: 1;
+  }
+
+  .greyish form button {
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  .illustration {
+    margin-top: 30px;
+  }
+
+  .user-info {
+    justify-content: center;
+  }
+
+  footer ul {
+    padding: 0;
+    width: 100%;
+  }
+}

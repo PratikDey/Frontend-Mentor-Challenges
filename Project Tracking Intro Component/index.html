@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Project tracking intro component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container">
+        <div class="flex">
+          <div>
+            <img src="./images/logo.svg" alt="logo" />
+          </div>
+          <button class="hamburger" id="hamburger">
+            <img class="open" src="./images/icon-hamburger.svg" alt="menu" />
+            <img class="close" src="./images/icon-close.svg" alt="close" />
+          </button>
+          <ul id="menu">
+            <li><a href="">Product</a></li>
+            <li><a href="">Features</a></li>
+            <li><a href="">Pricing</a></li>
+            <li class="login">
+              <a href=""><span>Login</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <div class="container mobile">
+        <div>
+          <h3><span class="bordered">New</span> Monograph Dashboard</h3>
+          <h1>Powerful insights into your team</h1>
+          <p>Project planning and time tracking for agile teams</p>
+
+          <div class="flex-section">
+            <button class="btn">Schedule a demo</button>
+            <h3>to see a live preview</h3>
+          </div>
+        </div>
+        <div>
+          <img
+            class="illustration"
+            src="./images/illustration-devices.svg"
+            alt="illustration"
+          />
+        </div>
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:ital@1&display=swap");
+
+body {
+  font-family: "Barlow", sans-serif;
+  overflow: hidden;
+}
+
+body::after {
+  background-color: hsl(207, 33%, 95%);
+  border-bottom-left-radius: 100px;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50vh;
+  width: 50vw;
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container > div {
+  flex: 0.8;
+}
+
+.container > div:first-child {
+  flex: 1.2;
+}
+
+.hamburger {
+  display: none;
+}
+
+.nav {
+  margin: 40px 0;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.nav ul li {
+  margin-left: 50px;
+  list-style-type: none;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  color: hsl(230, 29%, 20%);
+  font-size: 25px;
+}
+
+.nav ul .login {
+  list-style-type: disc;
+  color: hsl(231, 7%, 65%);
+}
+
+.nav ul .login a {
+  color: hsl(231, 7%, 65%);
+  margin-left: 20px;
+}
+
+section {
+  display: flex;
+  align-items: center;
+}
+
+section h3 {
+  font-size: 20px;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 5px;
+}
+
+section h3 .bordered {
+  border-radius: 50px;
+  border: 1px solid hsl(230, 29%, 20%);
+  background-color: hsl(230, 29%, 20%);
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+section h1 {
+  font-size: 70px;
+  margin-right: 200px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Barlow Condensed", sans-serif;
+  color: hsl(230, 29%, 20%);
+  line-height: 1;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+section p {
+  margin-top: 20px;
+  font-size: 25px;
+  color: hsl(231, 7%, 65%);
+  margin-right: 200px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+}
+
+.btn {
+  background-color: hsl(0, 100%, 68%);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  padding: 15px 25px;
+  margin-right: 10px;
+}
+
+.flex-section {
+  display: flex;
+  justify-content: flex-start;
+  align-self: center;
+  margin-top: 50px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.illustration {
+  transform: scale(1.8) translateX(12%) translateY(20%);
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow: scroll;
+  }
+
+  .mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+
+  .nav ul {
+    display: none;
+  }
+
+  .nav .hamburger {
+    display: block;
+    background-color: transparent;
+    outline: none;
+    border: none;
+  }
+
+  .nav .hamburger .close {
+    display: none;
+  }
+
+  .nav .hamburger.show .open {
+    display: none;
+  }
+
+  .nav .hamburger.show .close {
+    display: block;
+  }
+
+  .nav ul.show {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 70px;
+    left: 20px;
+    width: calc(100% - 40px);
+    z-index: 100;
+  }
+
+  .nav ul li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .nav ul .login {
+    border-top: 1px solid hsl(231, 7%, 65%);
+    width: 90%;
+    margin: 10px 0 0;
+    padding: 20px 0;
+    list-style-type: none;
+  }
+
+  .nav ul .login a {
+    color: hsl(231, 7%, 65%);
+  }
+
+  .nav .flex {
+    flex-direction: row;
+  }
+
+  .illustration {
+    transform: scale(1.01);
+  }
+
+  section h1 {
+    margin-right: 0;
+  }
+
+  section p {
+    margin-right: 0;
+  }
+}
